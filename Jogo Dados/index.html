@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Jogo de Dados - HTML5 canvas </title>
+
+    <meta name="description" content="Jogo de Dados - Jogo simples para demonstração de funcionamento de canvas em HTML5">
+    <meta name="robots" content="noindex, nofollow">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" media="all" href="./style.css">
+
+    <script src="./js/excanvas.compiled.js"></script>
+    <script src="./js/dados.js"></script>
+</head>
+<body>
+    <section id="main" class="container">
+
+    	<header class="col-md-12 text-center">
+            <h1>Cassino de Apostas - Dice Game</h1>
+        </header>
+
+        <div class="clearfix"></div>
+
+        <nav class="col-md-8 col-md-offset-2">
+            <ul class="regras-jogo">
+                <li>Regras do jogo
+                    <ul class="regras">
+                        <li>O Jogador lança um par de dados.</li>
+                        <li>O resultado dos dois dados somados pode ser um numero entre 2 e 12</li>
+                        <li>Se o jogador ter como resultado 2, 8 ou 12 ele ganha.</li>
+                        <li>Se o resultado for 5, 7 ou 11 ele perde.</li>
+                        <li>Se outro resultado como:(3, 4, 6, 9 ou 10) jogue novamente.</li>
+						<li>Cada acerto 1 ponto - Cada erro -1 ponto - se chegar a 3 pontos ele vence.</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="clearfix"></div>
+
+        <section class="dados col-md-3 col-md-offset-2">
+            <form name="f" id="f">
+                <input type="text" name="pontos" id="pontos">
+                <input type="text" name="mensagem" id="mensagem" value="">
+            </form>
+
+            <button class="btn btn-primary" onclick="dados();">Lançar Dados</button>
+        </section>
+
+        <canvas id="canvas" class="col-md-4" width="350" height="200">Seu navegador não suporta HTML5 canvas!</canvas>
+
+        <footer class="col-md-8 col-md-offset-2 text-center">
+            <p>Feito por Carlos Henrique Stoppa Veiga</p>
+        </footer>
+
+    </section>
+</body>
+</html>
